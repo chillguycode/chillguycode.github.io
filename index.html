@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Pranesh Nur — Teaching silicon to see, hear, and occasionally behave.">
+  <title>Pranesh Nur — AI &amp; ML Researcher</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+</head>
+<body>
+
+  <!-- Scroll progress -->
+  <div id="progress-bar" aria-hidden="true"></div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+
+  <!-- ═══════════════════════════════════════════
+       NAVIGATION
+  ════════════════════════════════════════════ -->
+  <nav class="nav" id="nav" aria-label="Main navigation">
+
+    <a href="https://github.com/chillguycode" class="nav-logo" aria-label="Home">chillguycode</a>
+
+    <ul class="nav-links" role="list">
+      <li><a href="#about">About</a></li>
+      <li><a href="#work">Work</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+    <div class="nav-right">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle colour theme">
+        <span class="theme-icon" aria-hidden="true">○</span>
+      </button>
+      <a href="#contact" class="nav-cta">Let's talk</a>
+      <button class="nav-hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+  </nav>
+
+  <!-- Mobile menu -->
+  <nav class="mobile-menu" id="mobileMenu" aria-label="Mobile navigation">
+    <a href="#about">About</a>
+    <a href="#work">Work</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+
+  <!-- ═══════════════════════════════════════════
+       HERO
+  ════════════════════════════════════════════ -->
+  <section class="hero" id="hero" aria-label="Introduction">
+    <div class="hero-inner">
+
+      <p class="hero-eyebrow reveal">
+        <span class="dot" aria-hidden="true"></span>
+        Open to research roles &amp; collaboration
+        <span class="hero-alias-preview">/ @chillguycode</span>
+      </p>
+
+      <h1 class="hero-name reveal">
+        <span class="line">Pranesh</span>
+        <span class="line italic">Nur</span>
+      </h1>
+
+      <div class="hero-meta reveal">
+        <p class="hero-role">AI &amp; ML Researcher</p>
+        <p class="hero-tagline">Teaching silicon to see, hear,<br>and occasionally behave.</p>
+      </div>
+
+      <a href="#work" class="hero-cta magnetic reveal">
+        <span>View Work</span>
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </a>
+
+    </div>
+
+    <div class="hero-scroll-indicator" aria-hidden="true">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       ABOUT
+  ════════════════════════════════════════════ -->
+  <section class="section about" id="about" aria-labelledby="about-heading">
+
+    <div class="section-label reveal">
+      <span>01</span>
+      <span>About</span>
+    </div>
+
+    <div class="about-grid">
+
+      <div class="about-image reveal">
+        <img src="assets/profile.jpg" alt="Pranesh Nur" class="profile-photo">
+      </div>
+
+      <div class="about-text">
+        <h2 class="section-heading reveal" id="about-heading">
+          Gradient descent<br>into the <em>wild</em>
+        </h2>
+
+        <p class="about-body reveal">
+          I teach machines to see things humans care about — chest X-rays, defective components, the sonic texture of a blues record halfway through the night. Sometimes they get it right on the first try. Usually they don't. That's the job.
+        </p>
+
+        <p class="about-body reveal">
+          Currently finishing my M.Tech at MNIT Jaipur, where my thesis lives at the intersection of diffusion models and medical imaging. Outside the thesis I build deployed systems — not because anyone asked, but because a model that only runs in a notebook isn't really a model.
+        </p>
+
+        <p class="about-body reveal">
+          ICCR Scholar twice over. One published paper. Permanent resident of the terminal.
+        </p>
+
+        <p class="about-alias-preview reveal">Find me building things as <code>chillguycode</code>.</p>
+
+        <div class="about-stats reveal-stagger">
+          <div class="stat">
+            <span class="stat-num">3+</span>
+            <span class="stat-label">Years in ML</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">3</span>
+            <span class="stat-label">Projects shipped</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num">1</span>
+            <span class="stat-label">Publication</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       WORK
+  ════════════════════════════════════════════ -->
+  <section class="section work" id="work" aria-labelledby="work-heading">
+
+    <div class="section-label reveal">
+      <span>02</span>
+      <span>Work</span>
+    </div>
+
+    <h2 class="section-heading" id="work-heading">
+      Escaped the<br><em>notebook</em>
+    </h2>
+
+    <!-- Project cover: solid bg + z-index covers the sticky heading beneath -->
+    <div class="project-cover">
+
+      <div class="carousel-wrapper" id="carouselTrackWrap">
+        <div class="carousel-track" id="carouselTrack" role="list">
+
+          <!-- Card 01 -->
+          <article class="project-card" role="listitem">
+            <div class="project-card-image" role="img" aria-label="PneumoDetect — EigenCAM X-ray visualisations">
+              <img src="assets/project1.png" alt="Grid of chest X-rays with EigenCAM heatmap overlays showing pneumonia detection regions">
+            </div>
+            <div class="project-card-body">
+              <p class="project-card-num">01</p>
+              <h3 class="project-card-title">PneumoDetect</h3>
+              <p class="project-card-desc">
+                End-to-end medical AI system deployed to Google Cloud Run. Two-stage inference pipeline — 
+                a CNN guard model filters non-X-ray inputs before EfficientNetV2-S classification with EigenCAM explainability. 
+                96.15% test accuracy. Docker image slimmed from 4.1 GB to 256 MB; cold start cut from 34s to 8s.
+              </p>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">PyTorch</span>
+                  <span class="project-tag">ONNX</span>
+                  <span class="project-tag">FastAPI</span>
+                  <span class="project-tag">GCP</span>
+                </div>
+                <a href="https://pneumodetect-493921.web.app/" class="project-link" aria-label="View live demo">
+                  Live Demo
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 02 -->
+          <article class="project-card" role="listitem">
+            <div class="project-card-image" role="img" aria-label="Visual Attention Benchmark project">
+		<img class="code-img code-img--dark" src="assets/project2-dark.png" alt="Visual Attention Benchmark — dark theme">
+		<img class="code-img code-img--light" src="assets/project2-light.png" alt="Visual Attention Benchmark — light theme">
+            </div>
+            <div class="project-card-body">
+              <p class="project-card-num">02</p>
+              <h3 class="project-card-title">Visual Attention Benchmark</h3>
+              <p class="project-card-desc">
+                Reproducible benchmarking pipeline comparing SE and CBAM attention mechanisms against a ResNet baseline 
+                across four datasets. Achieved +10.61% accuracy improvement with CBAM on Oxford 102 Flowers. 
+                Tracked end-to-end with MLflow and modular CLI configuration.
+              </p>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">PyTorch</span>
+                  <span class="project-tag">MLflow</span>
+                  <span class="project-tag">ResNet</span>
+                </div>
+                <a href="https://github.com/chillguycode/visual_attention_benchmarking" class="project-link" aria-label="View project">
+                  View
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 03 -->
+          <article class="project-card" role="listitem">
+            <div class="project-card-image theme-code-img" role="img" aria-label="HTTP Server — C++ source code">
+              <img class="code-img code-img--dark" src="assets/project3-dark.png" alt="C++ HTTP server code — dark theme">
+              <img class="code-img code-img--light" src="assets/project3-light.png" alt="C++ HTTP server code — light theme">
+            </div>
+            <div class="project-card-body">
+              <p class="project-card-num">03</p>
+              <h3 class="project-card-title">HTTP Server From Scratch</h3>
+              <p class="project-card-desc">
+                Functional HTTP server built in C++ using the low-level Winsock API, managing the full TCP socket lifecycle 
+                from connection accept to response dispatch. Modular architecture with CMake build management — 
+                no frameworks, no shortcuts.
+              </p>
+              <div class="project-card-footer">
+                <div class="project-tags">
+                  <span class="project-tag">C++</span>
+                  <span class="project-tag">CMake</span>
+                  <span class="project-tag">Winsock</span>
+                </div>
+                <a href="https://github.com/chillguycode/Http-Server" class="project-link" aria-label="View project">
+                  View
+                  <svg width="14" height="14" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+                    <path d="M5 15L15 5M15 5H7M15 5v8" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div><!-- /carousel-track -->
+      </div><!-- /carousel-wrapper -->
+
+      <!-- Controls inside cover so hover glow isn't clipped and heading stays covered -->
+      <div class="carousel-controls" aria-label="Carousel navigation">
+        <button class="carousel-btn" id="carouselPrev" aria-label="Previous project">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M13 4l-6 6 6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <button class="carousel-btn" id="carouselNext" aria-label="Next project">
+          <svg width="18" height="18" viewBox="0 0 20 20" fill="none" aria-hidden="true">
+            <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="carousel-dots" role="tablist" aria-label="Project slides">
+          <button class="carousel-dot active" role="tab" aria-label="Project 1" aria-selected="true"></button>
+          <button class="carousel-dot"         role="tab" aria-label="Project 2" aria-selected="false"></button>
+          <button class="carousel-dot"         role="tab" aria-label="Project 3" aria-selected="false"></button>
+        </div>
+      </div>
+
+    </div><!-- /project-cover -->
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       EXPERIENCE
+  ════════════════════════════════════════════ -->
+  <section class="section" id="experience" aria-labelledby="exp-heading">
+
+    <div class="section-label reveal">
+      <span>03</span>
+      <span>Experience</span>
+    </div>
+
+    <h2 class="section-heading reveal" id="exp-heading" style="margin-bottom: 1rem;">
+      Where I've<br><em>trained</em>.
+    </h2>
+
+    <div class="experience-list">
+
+      <div class="exp-item reveal">
+        <div class="exp-period">Sep 2024 — Present</div>
+        <div class="exp-right">
+          <h3 class="exp-role">M.Tech Research Scholar</h3>
+          <p class="exp-company">MNIT Jaipur — Generative AI &amp; Computer Vision</p>
+          <p class="exp-desc">
+            Conducting thesis research on diffusion-based generative models for computer vision. 
+            Working with Stable Diffusion, ControlNet, DDPM, LoRA, and IP-Adapter for domain-specific 
+            image synthesis and data augmentation.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">Aug 2021 — Jul 2023</div>
+        <div class="exp-right">
+          <h3 class="exp-role">Representative of Asian Students</h3>
+          <p class="exp-company">DTU International Students' Society, Delhi</p>
+          <p class="exp-desc">
+            Represented Asian students in the Chamber of Representatives. Coordinated onboarding 
+            for newly admitted international students across two consecutive academic years.
+          </p>
+        </div>
+      </div>
+
+      <div class="exp-item reveal">
+        <div class="exp-period">2020 — 2024</div>
+        <div class="exp-right">
+          <h3 class="exp-role">B.Tech, Computer Engineering</h3>
+          <p class="exp-company">Delhi Technological University (DTU), Delhi — CGPA 7.73</p>
+          <p class="exp-desc">
+            Thesis: Multimodal Sentiment Analysis using Late Fusion LSTM. 
+            Published at GCMM2024 International Conference, Thailand. 
+            ICCR Merit Scholarship recipient.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       SKILLS
+  ════════════════════════════════════════════ -->
+  <section class="section skills" id="skills" aria-labelledby="skills-heading">
+
+    <div class="section-label reveal">
+      <span>04</span>
+      <span>Skills</span>
+    </div>
+
+    <h2 class="section-heading reveal" id="skills-heading" style="margin-bottom: 3rem;">
+      Tools &amp; <em>Craft</em>
+    </h2>
+
+    <div class="skills-grid">
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">Generative AI &amp; ML</h4>
+        <ul class="skill-list">
+          <li>Stable Diffusion / ControlNet</li>
+          <li>LoRA Fine-Tuning / IP-Adapter</li>
+          <li>PyTorch / HuggingFace</li>
+          <li>Multimodal Learning</li>
+          <li>NumPy / Pandas / OpenCV</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">MLOps &amp; Deployment</h4>
+        <ul class="skill-list">
+          <li>MLflow / ONNX</li>
+          <li>FastAPI / Docker / Nginx</li>
+          <li>GitHub Actions / Pytest</li>
+          <li>Google Cloud Run</li>
+          <li>Firebase Hosting</li>
+        </ul>
+      </div>
+
+      <div class="skill-group reveal">
+        <h4 class="skill-group-title">Systems &amp; Languages</h4>
+        <ul class="skill-list">
+          <li>Python / C++ / C</li>
+          <li>Bash / SQL / CMake</li>
+          <li>Data Structures &amp; OOP</li>
+          <li>Neovim / Git / fzf</li>
+          <li>Jupyter Notebook</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       CONTACT
+  ════════════════════════════════════════════ -->
+  <section class="section contact" id="contact" aria-labelledby="contact-heading">
+
+    <div class="section-label reveal">
+      <span>05</span>
+      <span>Contact</span>
+    </div>
+
+    <div class="contact-inner">
+      <h2 class="contact-heading reveal" id="contact-heading">
+        Let's build<br>something <em>real</em>.
+      </h2>
+
+      <p class="contact-sub reveal">Open to research roles, applied ML engineering, and the occasional interesting problem.</p>
+
+      <div class="contact-links reveal">
+        <a href="#" class="contact-email magnetic" id="contact-email-link"
+	   data-e="bnVyLnByYW5lc2hAb3V0bG9vay5jb20="
+           aria-label="Send email">
+        </a>
+        <nav class="contact-socials" aria-label="Social links">
+          <a href="https://github.com/chillguycode" target="_blank" rel="noopener" class="social-link">GitHub</a>
+          <a href="https://linkedin.com/in/pranesh-nur" target="_blank" rel="noopener" class="social-link">LinkedIn</a>
+          <!-- <a href="#" class="social-link">Scholar</a> -->
+        </nav>
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- ═══════════════════════════════════════════
+       FOOTER
+  ════════════════════════════════════════════ -->
+  <footer class="footer">
+    <p>© 2026 Pranesh Nur</p>
+    <p>Designed &amp; built by <a href="https://github.com/chillguycode" target="_blank" rel="noopener" class="footer-alias">chillguycode</a>.</p>
+  </footer>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
