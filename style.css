@@ -133,7 +133,6 @@ html {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  scroll-snap-type: y mandatory;
   scroll-padding-top: var(--nav-h);
   overscroll-behavior: none;
 }
@@ -409,8 +408,6 @@ img  { display: block; max-width: 100%; }
   max-width: 1280px;
   margin: 0 auto;
   /* Snap — each section is a slide */
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
   min-height: 100svh;
   box-sizing: border-box;
 }
@@ -470,9 +467,6 @@ img  { display: block; max-width: 100%; }
   padding: calc(var(--nav-h) + 4rem) clamp(1.5rem, 5vw, 4rem) 4rem;
   position: relative;
   overflow: hidden;
-  /* Snap */
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
 }
 
 /* ── Lava lamp blobs (hero + contact) ────────────────────── */
@@ -1193,7 +1187,6 @@ img  { display: block; max-width: 100%; }
   font-weight: 300;
   letter-spacing: 0.05em;
   color: var(--fg-subtle);
-  scroll-snap-align: start;
 }
 
 /* ── chillguycode alias styles ────────────────────────── */
