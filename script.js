@@ -152,6 +152,25 @@ if (track && btnPrev && btnNext) {
     setTimeout(() => { swipeLocked = false; }, 600);
   }, { passive: false });
 
+
+  // Touch swipe for mobile
+  let touchStartX = 0;
+  let touchStartY = 0;
+
+  wrapper.addEventListener('touchstart', e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+  }, { passive: true });
+
+  wrapper.addEventListener('touchend', e => {
+    const dx = e.changedTouches[0].clientX - touchStartX;
+    const dy = e.changedTouches[0].clientY - touchStartY;
+    if (Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 40) {
+      if (dx < 0) goTo(cur + 1);
+      else        goTo(cur - 1);
+    }
+  }, { passive: true });
+
   goTo(0);
 }
 
