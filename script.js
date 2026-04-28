@@ -15,6 +15,20 @@ const titleObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.15 });
 
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal:not(.section-heading):not(.section-label), .reveal-stagger').forEach(el => {
+  revealObserver.observe(el);
+});
+
 document.querySelectorAll('.section-label, .section-heading').forEach(el => {
   titleObserver.observe(el);
 });
@@ -47,7 +61,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
     if (!target) return;
     e.preventDefault();
     const top = target.getBoundingClientRect().top + window.scrollY - NAV_H;
-    window.scrollTo({ top, behavior: 'smooth' });
+    if (smoothScroll) smoothScroll.scrollTo(top);
+    else window.scrollTo({ top, behavior: 'smooth' });
   });
 });
 
@@ -139,3 +154,42 @@ if (track && btnPrev && btnNext) {
 
   goTo(0);
 }
+
+
+/* ── Lerp smooth scroll ──────────────────────────────────── */
+const smoothScroll = (() => {
+  if ('ontouchstart' in window) return null;
+
+  let cur = window.scrollY;
+  let tgt = window.scrollY;
+  let raf = null;
+  const EASE = 0.6;
+
+  const lerp = (a, b, t) => a + (b - a) * t;
+  const maxY = () => document.documentElement.scrollHeight - window.innerHeight;
+
+  function tick() {
+    cur = lerp(cur, tgt, EASE);
+    window.scrollTo(0, cur);
+    if (Math.abs(tgt - cur) > 0.05) {
+      raf = requestAnimationFrame(tick);
+    } else {
+      window.scrollTo(0, tgt);
+      cur = tgt;
+      raf = null;
+    }
+  }
+
+  window.addEventListener('wheel', e => {
+    e.preventDefault();
+    tgt = Math.max(0, Math.min(tgt + e.deltaY, maxY()));
+    if (!raf) { cur = window.scrollY; raf = requestAnimationFrame(tick); }
+  }, { passive: false });
+
+  return {
+    scrollTo(y) {
+      tgt = Math.max(0, Math.min(y, maxY()));
+      if (!raf) { cur = window.scrollY; raf = requestAnimationFrame(tick); }
+    }
+  };
+})();
