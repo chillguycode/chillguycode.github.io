@@ -68,7 +68,8 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 
 /* ── Theme ──────────────────────────────────────────────── */
 const html  = document.documentElement;
-const saved = localStorage.getItem('theme') || 'light';
+const saved = localStorage.getItem('theme') ||
+  (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 html.setAttribute('data-theme', saved);
 
 const themeBtn = document.getElementById('themeToggle');

@@ -12,6 +12,11 @@ GCP, ONNX, diffusion models.">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://chillguycode.github.io/assets/og-img.png">
+  <script>
+    const t = localStorage.getItem('theme') ||
+      (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+    document.documentElement.setAttribute('data-theme', t);
+  </script>
   <title>Pranesh Nur — AI &amp; ML Engineer</title>
 
   <link rel="stylesheet" href="style.css">
@@ -112,7 +117,7 @@ GCP, ONNX, diffusion models.">
     <div class="about-grid">
 
       <div class="about-image reveal">
-        <img src="assets/profile.jpg" alt="Pranesh Nur" class="profile-photo">
+        <img src="assets/profile.jpg" alt="Pranesh Nur" class="profile-photo" fetchpriority="high">
       </div>
 
       <div class="about-text">
@@ -177,7 +182,7 @@ GCP, ONNX, diffusion models.">
           <!-- Card 01 -->
           <article class="project-card" role="listitem">
             <div class="project-card-image" role="img" aria-label="PneumoDetect — EigenCAM X-ray visualisations">
-              <img src="assets/project1.png" alt="Grid of chest X-rays with EigenCAM heatmap overlays showing pneumonia detection regions">
+              <img src="assets/project1.png" alt="Grid of chest X-rays with EigenCAM heatmap overlays showing pneumonia detection regions" fetchpriority="low">
             </div>
             <div class="project-card-body">
               <p class="project-card-num">01</p>
@@ -207,8 +212,8 @@ GCP, ONNX, diffusion models.">
           <!-- Card 02 -->
           <article class="project-card" role="listitem">
             <div class="project-card-image" role="img" aria-label="Visual Attention Benchmark project">
-		<img class="code-img code-img--dark" src="assets/project2-dark.png" alt="Visual Attention Benchmark — dark theme">
-		<img class="code-img code-img--light" src="assets/project2-light.png" alt="Visual Attention Benchmark — light theme">
+		<img class="code-img code-img--dark" src="assets/project2-dark.png" alt="Visual Attention Benchmark — dark theme" fetchpriority="low">
+		<img class="code-img code-img--light" src="assets/project2-light.png" alt="Visual Attention Benchmark — light theme" fetchpriority="low">
             </div>
             <div class="project-card-body">
               <p class="project-card-num">02</p>
@@ -237,8 +242,8 @@ GCP, ONNX, diffusion models.">
           <!-- Card 03 -->
           <article class="project-card" role="listitem">
             <div class="project-card-image theme-code-img" role="img" aria-label="HTTP Server — C++ source code">
-              <img class="code-img code-img--dark" src="assets/project3-dark.png" alt="C++ HTTP server code — dark theme">
-              <img class="code-img code-img--light" src="assets/project3-light.png" alt="C++ HTTP server code — light theme">
+              <img class="code-img code-img--dark" src="assets/project3-dark.png" alt="C++ HTTP server code — dark theme" fetchpriority="low">
+              <img class="code-img code-img--light" src="assets/project3-light.png" alt="C++ HTTP server code — light theme" fetchpriority="low">
             </div>
             <div class="project-card-body">
               <p class="project-card-num">03</p>
