@@ -347,7 +347,7 @@ img  { display: block; max-width: 100%; }
 .section {
   animation: sectionEnter linear both;
   animation-timeline: view();
-  animation-range: entry 0% entry 28%;
+  animation-range: entry 0% entry 35%;
 }
 
 /* Titles: entry via IntersectionObserver transition + exit-lag via scroll-driven animation */
@@ -480,7 +480,7 @@ img  { display: block; max-width: 100%; }
   justify-content: center;
   padding: calc(var(--nav-h) + 4rem) clamp(1.5rem, 5vw, 4rem) 4rem;
   position: relative;
-  overflow: hidden;
+  overflow: clip;
 }
 
 /* ── Lava lamp blobs (hero + contact) ────────────────────── */
@@ -584,6 +584,16 @@ img  { display: block; max-width: 100%; }
   width: 100%;
   position: relative;
   z-index: 1;
+  animation: heroExit linear both;
+  animation-timeline: view();
+  animation-range: exit 0% exit 40%;
+}
+
+@keyframes heroExit {
+  to {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
 }
 
 .hero-eyebrow {
@@ -1276,4 +1286,20 @@ img  { display: block; max-width: 100%; }
   .exp-item:hover { padding: 2.5rem 0; margin: 0; background: none; }
 
   .footer { flex-direction: column; gap: 0.4rem; text-align: center; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal, .reveal-stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+  .section-heading, .section-label {
+    opacity: 1;
+    transform: none;
+  }
 }

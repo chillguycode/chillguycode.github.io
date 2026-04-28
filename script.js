@@ -163,7 +163,7 @@ const smoothScroll = (() => {
   let cur = window.scrollY;
   let tgt = window.scrollY;
   let raf = null;
-  const EASE = 0.6;
+  const EASE = 0.3;
 
   const lerp = (a, b, t) => a + (b - a) * t;
   const maxY = () => document.documentElement.scrollHeight - window.innerHeight;
