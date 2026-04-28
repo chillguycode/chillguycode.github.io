@@ -138,6 +138,7 @@ html {
   text-rendering: optimizeLegibility;
   scroll-padding-top: var(--nav-h);
   overscroll-behavior-x: none;
+  overflow-x: hidden;
 }
 
 body {
