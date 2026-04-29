@@ -25,6 +25,14 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12 });
 
+const blobObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    entry.target.classList.toggle('blob-active', entry.isIntersecting);
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.hero, .contact').forEach(el => blobObserver.observe(el));
+
 document.querySelectorAll('.reveal:not(.section-heading):not(.section-label), .reveal-stagger').forEach(el => {
   revealObserver.observe(el);
 });

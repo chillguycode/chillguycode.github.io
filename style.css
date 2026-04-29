@@ -604,6 +604,16 @@ img  { display: block; max-width: 100%; }
   will-change: transform, border-radius;
 }
 
+.hero::before, .hero::after,
+.contact::before, .contact::after {
+  animation-play-state: paused;
+}
+
+.hero.blob-active::before, .hero.blob-active::after,
+.contact.blob-active::before, .contact.blob-active::after {
+  animation-play-state: running;
+}
+
 .hero-inner {
   max-width: 1280px;
   margin: 0 auto;
