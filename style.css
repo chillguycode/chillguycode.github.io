@@ -130,6 +130,11 @@
   }
 }
 
+::selection {
+  background: var(--accent-dim);
+  color: var(--fg);
+}
+
 /* ── Reset ────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -470,6 +475,7 @@ img  { display: block; max-width: 100%; }
 :root:not([data-theme]) .section-label span:first-child {
   opacity: 0.45;
 }
+
 .section-label::after {
   content: '';
   flex: 1;
@@ -479,6 +485,10 @@ img  { display: block; max-width: 100%; }
   transform-origin: left center;
   transform: scaleX(0);
   transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-label.title-visible::after {
+  transform: scaleX(1);
 }
 
 .section-label.title-visible::after {
