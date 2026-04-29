@@ -94,12 +94,28 @@ if (emailEl) {
 const ham  = document.getElementById('hamburger');
 const menu = document.getElementById('mobileMenu');
 
+let scrollPos = 0;
+
+function lockScroll() {
+  scrollPos = window.scrollY;
+  document.body.style.position = 'fixed';
+  document.body.style.top = `-${scrollPos}px`;
+  document.body.style.width = '100%';
+}
+
+function unlockScroll() {
+  document.body.style.position = '';
+  document.body.style.top = '';
+  document.body.style.width = '';
+  window.scrollTo(0, scrollPos);
+}
+
 if (ham && menu) {
   ham.addEventListener('click', () => {
     const open = ham.classList.toggle('open');
     menu.classList.toggle('open', open);
     ham.setAttribute('aria-expanded', String(open));
-    document.body.style.overflow = open ? 'hidden' : '';
+    open ? lockScroll() : unlockScroll();
   });
 
   menu.querySelectorAll('a').forEach(a => {
@@ -107,9 +123,12 @@ if (ham && menu) {
       ham.classList.remove('open');
       menu.classList.remove('open');
       ham.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
+      unlockScroll();
     });
   });
+  menu.addEventListener('touchmove', e => {
+    e.preventDefault();
+  }, { passive: false });
 }
 
 /* ── Carousel ───────────────────────────────────────────── */
