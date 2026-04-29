@@ -401,8 +401,8 @@ img  { display: block; max-width: 100%; }
 .reveal:not(.section-heading):not(.section-label) {
   opacity: 0;
   transform: translateY(24px);
-  transition: opacity 0.7s var(--ease-out),
-              transform 0.8s var(--ease-out),
+  transition: opacity 0.7s var(--ease-out) 250ms,
+              transform 0.8s var(--ease-out) 250ms,
               background-color 0.45s var(--ease),
               border-color 0.45s var(--ease),
               color 0.45s var(--ease);
@@ -411,7 +411,6 @@ img  { display: block; max-width: 100%; }
 .reveal.is-visible:not(.section-heading):not(.section-label) {
   opacity: 1;
   transform: translateY(0);
-  transition-delay: 250ms;
 }
 
 .reveal-stagger > * {
@@ -655,6 +654,8 @@ img  { display: block; max-width: 100%; }
   line-height: 0.9;
   letter-spacing: -0.025em;
   margin-bottom: 3.5rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .hero-name .line { display: block; }
@@ -848,7 +849,6 @@ img  { display: block; max-width: 100%; }
   /* Transform-based sliding — no scroll, full easing control */
   transition: transform 0.6s var(--ease-out);
   will-change: transform;
-  max-width: 100%;
 }
 
 .project-card {
@@ -858,7 +858,6 @@ img  { display: block; max-width: 100%; }
   border-radius: 3px;
   overflow: hidden;
   transition: box-shadow 0.45s var(--ease-out), transform 0.45s var(--ease-out);
-  will-change: transform;
 }
 
 .project-card:hover {
