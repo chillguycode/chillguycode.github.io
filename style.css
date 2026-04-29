@@ -989,10 +989,10 @@ img  { display: block; max-width: 100%; }
   font-weight: 400;
   letter-spacing: 0.07em;
   color: var(--fg-muted);
-  transition: color 0.25s, gap 0.25s var(--ease-spring);
+  transition: color 0.4s var(--ease-out);
 }
-.project-link svg { transition: transform 0.3s var(--ease-spring); }
-.project-link:hover { color: var(--accent); gap: 0.65rem; }
+.project-link svg { transition: transform 0.4s var(--ease-out); }
+.project-link:hover { color: var(--accent); }
 .project-link:hover svg { transform: translate(3px, -3px); }
 
 /* Carousel controls */
@@ -1079,8 +1079,9 @@ img  { display: block; max-width: 100%; }
   object-fit: cover;
   object-position: left top;
   transform: scale(1.15) translateY(-3%);
-  transition: opacity 0.35s cubic-bezier(0.2, 0, 0.4, 1),
-              filter  0.35s cubic-bezier(0.2, 0, 0.4, 1);
+  transition: opacity 0.45s var(--ease-out),
+            filter  0.45s var(--ease-out),
+            transform 0.45s var(--ease-out);
 }
 
 /* Light mode: show light, hide dark */
