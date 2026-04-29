@@ -381,7 +381,7 @@ img  { display: block; max-width: 100%; }
 .section-heading {
   opacity: 0;
   transform: translateY(12px);
-  transition: opacity 0.65s var(--ease-out), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  transition: opacity 0.65s var(--ease-out) 100ms, transform 0.75s cubic-bezier(0.16, 1, 0.3, 1) 100ms;
   position: relative;
   z-index: 0;
 }
@@ -411,6 +411,7 @@ img  { display: block; max-width: 100%; }
 .reveal.is-visible:not(.section-heading):not(.section-label) {
   opacity: 1;
   transform: translateY(0);
+  transition-delay: 250ms;
 }
 
 .reveal-stagger > * {
@@ -474,8 +475,15 @@ img  { display: block; max-width: 100%; }
   content: '';
   flex: 1;
   height: 1px;
-  background: var(--border);
+  background: linear-gradient(to right, transparent, var(--border) 15%, var(--border) 85%, transparent);
   max-width: 72px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.section-label.title-visible::after {
+  transform: scaleX(1);
 }
 
 .section-heading {
@@ -484,6 +492,11 @@ img  { display: block; max-width: 100%; }
   font-weight: 400;
   line-height: 1.08;
   letter-spacing: -0.015em;
+}
+
+.section-heading:hover {
+  letter-spacing: -0.005em;
+  transition: letter-spacing 0.4s var(--ease-out);
 }
 
 /* ── Hero ─────────────────────────────────────────────────── */
@@ -833,7 +846,7 @@ img  { display: block; max-width: 100%; }
   display: flex;
   gap: 1.5rem;
   /* Transform-based sliding — no scroll, full easing control */
-  transition: transform 0.55s cubic-bezier(0.25, 0.85, 0.35, 1.08);
+  transition: transform 0.6s var(--ease-out);
   will-change: transform;
   max-width: 100%;
 }
@@ -844,12 +857,13 @@ img  { display: block; max-width: 100%; }
   border: 1px solid var(--border);
   border-radius: 3px;
   overflow: hidden;
-  transition: box-shadow 0.35s var(--ease), transform 0.35s var(--ease);
+  transition: box-shadow 0.45s var(--ease-out), transform 0.45s var(--ease-out);
+  will-change: transform;
 }
 
 .project-card:hover {
   box-shadow: var(--shadow);
-  transform: translateY(-3px);
+  transform: translateY(-5px);
 }
 
 .project-card-image {
