@@ -1,7 +1,8 @@
 /* ============================================================
-   PORTFOLIO — script.js  (lean edition)
-   Only: theme toggle · email assembly · hamburger · carousel
-   No scroll listeners, no observers, no JS animations
+   PORTFOLIO — script.js
+   Theme toggle · email assembly · hamburger · carousel
+   IntersectionObservers: reveal · title · blob · active nav
+   LERP smooth scroll (desktop only)
    ============================================================ */
 
 /* ── Title slide-in on scroll ────────────────────────────── */
