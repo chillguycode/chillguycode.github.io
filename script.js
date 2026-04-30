@@ -28,7 +28,7 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 const blobObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
-    entry.target.classList.toggle('blob-active', entry.isIntersecting);
+    entry.target.classList.toggle('blob-paused', !entry.isIntersecting);
   });
 }, { threshold: 0.1 });
 

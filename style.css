@@ -633,14 +633,9 @@ img  { display: block; max-width: 100%; }
   will-change: transform, border-radius;
 }
 
-.hero::before, .hero::after,
-.contact::before, .contact::after {
+.hero.blob-paused::before, .hero.blob-paused::after,
+.contact.blob-paused::before, .contact.blob-paused::after {
   animation-play-state: paused;
-}
-
-.hero.blob-active::before, .hero.blob-active::after,
-.contact.blob-active::before, .contact.blob-active::after {
-  animation-play-state: running;
 }
 
 .hero-inner {
