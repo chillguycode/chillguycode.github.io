@@ -129,12 +129,23 @@ if (ham && menu) {
 
   menu.querySelectorAll('a').forEach(a => {
     a.addEventListener('click', () => {
+      const target = document.getElementById(a.getAttribute('href').slice(1));
       ham.classList.remove('open');
       menu.classList.remove('open');
       ham.setAttribute('aria-expanded', 'false');
-      unlockScroll();
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollPos);
+      if (target) {
+        requestAnimationFrame(() => {
+          const top = target.getBoundingClientRect().top + window.scrollY - NAV_H;
+          window.scrollTo({ top, behavior: 'smooth' });
+        });
+      }
     });
   });
+
   menu.addEventListener('touchmove', e => {
     e.preventDefault();
   }, { passive: false });
