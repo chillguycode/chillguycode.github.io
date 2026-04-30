@@ -135,6 +135,28 @@
   color: var(--fg);
 }
 
+.nav-links a,
+.theme-toggle,
+.nav-cta,
+.hero-cta,
+.project-link,
+.social-link,
+.contact-email {
+  position: relative;
+}
+
+.nav-links a::before,
+.theme-toggle::before,
+.nav-cta::before,
+.hero-cta::before,
+.project-link::before,
+.social-link::before,
+.contact-email::before {
+  content: '';
+  position: absolute;
+  inset: -0.75rem;
+}
+
 /* ── Reset ────────────────────────────────────────────────── */
 *, *::before, *::after {
   box-sizing: border-box;
@@ -228,6 +250,8 @@ img  { display: block; max-width: 100%; }
   display: flex;
   gap: 2.5rem;
   align-items: center;
+  padding: 0.5rem;
+  margin: -0.5rem;
 }
 
 .nav-links a {
@@ -339,6 +363,7 @@ img  { display: block; max-width: 100%; }
   font-weight: 300;
   color: var(--fg);
   transition: color 0.2s;
+  touch-action: manipulation;
 }
 .mobile-menu a:hover { color: var(--accent); }
 
